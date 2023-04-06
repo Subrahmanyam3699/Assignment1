@@ -1,0 +1,116 @@
+const login1=document.getElementById("login_page");
+const reg=document.getElementById("register_page");
+const note=document.getElementById("note_page");
+//console.log(login1)
+if(login1) login1.addEventListener('submit',funlogin)
+if(reg) reg.addEventListener('submit',funregister)
+if(note) note.addEventListener('submit',funnote)
+
+function funregister(e)
+{
+    e.preventDefault();
+    let firstname=document.getElementById("firstname").value;
+    let lastname=document.getElementById("lastname").value;
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+   
+   
+
+    class User{
+        constructor(firstname,lastname,email,password)
+        {  
+            this.firstname=firstname;
+            this.lastname=lastname;
+            this.email=email;
+            this.password=password;
+           
+        }
+        getemail(){
+            return this.email;
+        }
+        setemail(newemail){
+            this.email = newemail;
+        }
+        getpassword(){
+            return this.password;
+        }
+        setpassword(newpassword){
+            this.password=newpassword
+        }
+        getfirstname(){
+            return this.firstname;
+        }
+        setfirstname(newfirstname){
+            this.firstname = newfirstname;
+        }
+        getlastname(){
+            return this.lastname;
+        }
+        setlastname(newlastname){
+            this.lastname=newlastname;
+        }
+    }
+   
+    
+    const user1=new User(firstname,lastname,email,password);
+    console.log(user1);
+}
+
+function funlogin(e)
+{
+    e.preventDefault()
+
+    let email=document.getElementById('email').value;
+    let password=document.getElementById('password').value;
+   
+    class User{
+        constructor(email,password)
+        {
+           
+            this.email=email;
+            this.password=password;
+        }
+        getemail(){
+            return this.email;
+        }
+        setemail(newemail){
+            this.email = newemail;
+        }
+        getpassword(){
+            return this.password;
+        }
+        setpassword(newpassword){
+            this.password=newpassword
+        }
+    }
+   
+    const user1=new User(email,password);
+    console.log(user1);
+}
+
+function funnote(e)
+{
+    e.preventDefault()
+   
+    let note=document.getElementById('note').value;
+   
+   
+    class User{
+        constructor(note)
+        {
+           
+            this.note=note;
+           
+        }
+        getnote(){
+            return this.note;
+        }
+        setnote(newnote){
+            this.note = newnote;
+        }
+    }
+       
+   
+    const user1=new User(note);
+    console.log(user1);
+}

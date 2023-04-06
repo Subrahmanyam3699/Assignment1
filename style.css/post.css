@@ -1,0 +1,25 @@
+h2 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 20px;
+}
+
+div {
+    background-color: lightgrey;
+  width: 298px;
+  border: 15px snow skyblue;
+  padding: 40px;
+  margin: 25px;
+}
+
+img {
+    height: 60px;
+    width: 60px;
+}
+
+
+
+body {
+    background-image: url(/images/light\ 1.jpg)
+}
